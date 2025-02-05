@@ -10,7 +10,7 @@ namespace SimpleStock.Data.Categories
     public class CategoriesDataSeeder : IDataSeedContributor, ITransientDependency
     {
         private readonly IRepository<Category , int> categoriesRepository;
-        public   CategoriesDataSeeder(IRepository<Category, int> categoriesRepository)
+        public CategoriesDataSeeder(IRepository<Category, int> categoriesRepository)
         {
             this.categoriesRepository = categoriesRepository;   
         }
