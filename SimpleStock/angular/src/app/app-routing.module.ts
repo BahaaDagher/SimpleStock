@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -6,6 +7,14 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
+  },
+  {
+    path: 'products',
+    loadChildren: () => import('./modules/products/products.module').then(m => m.ProductsModule),
+  },
+  {
+    path: 'categories',
+    loadChildren: () => import('./modules/categories/categories.module').then(m => m.CategoriesModule),
   },
   {
     path: 'account',

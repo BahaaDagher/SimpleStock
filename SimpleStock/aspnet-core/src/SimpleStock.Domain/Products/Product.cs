@@ -7,8 +7,8 @@ namespace SimpleStock.Products
     {
         public string NameAr { get; set; }
         public string NameEn { get; set; }
-        public string DesciptionAr { get; set; }
-        public string DesciptionEn { get; set; }
+        public string DescriptionAr { get; set; }
+        public string DescriptionEn { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }
     }

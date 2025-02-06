@@ -14,8 +14,8 @@ namespace SimpleStock.Configurations
 
             builder.Property(x => x.NameAr).HasMaxLength(SimpleStockConsts.GeneralTextMaxLength);
             builder.Property(x => x.NameEn).HasMaxLength(SimpleStockConsts.GeneralTextMaxLength);
-            builder.Property(x => x.DesciptionAr).HasMaxLength(SimpleStockConsts.GeneralDescriptionMaxLength);
-            builder.Property(x => x.DesciptionEn).HasMaxLength(SimpleStockConsts.GeneralDescriptionMaxLength);
+            builder.Property(x => x.DescriptionAr).HasMaxLength(SimpleStockConsts.GeneralDescriptionMaxLength);
+            builder.Property(x => x.DescriptionEn).HasMaxLength(SimpleStockConsts.GeneralDescriptionMaxLength);
 
             builder.HasOne(p => p.Category)
                 .WithMany()
