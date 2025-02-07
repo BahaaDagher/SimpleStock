@@ -1,7 +1,7 @@
 <div class="d-flex flex-row-reverse">
-  <button  class="btn btn-primary mb-2" (click)="addProduct()">+  New Category</button>
+  <button  class="btn btn-primary mb-2" (click)="addProduct()">{{'Categories::AddCategory' | abpLocalization}}</button>
 </div>
-<h2>Categories List</h2>
+<h2>{{'Categories::SimpleStock.Categories' | abpLocalization}}</h2>
 <ngx-datatable class="material"
   [rows]="(categories$ | async)?.items || []"
   [count]="(categories$ | async)?.totalCount || 0"
@@ -11,25 +11,25 @@
   [rowHeight]="50"
   [limit]="5">
   
-  <ngx-datatable-column name="Name Arabic" prop="nameAr">
+  <ngx-datatable-column name="{{'Categories::AddCategory' | abpLocalization}}" prop="nameAr">
     <ng-template let-row="row" ngx-datatable-cell-template>
       {{ row.nameAr }}
     </ng-template>
   </ngx-datatable-column>
 
-  <ngx-datatable-column name="Name English" prop="nameEn">
+  <ngx-datatable-column name="{{'Categories::CategoryNameAr' | abpLocalization}}" prop="nameEn">
     <ng-template let-row="row" ngx-datatable-cell-template>
       {{ row.nameEn }}
     </ng-template>
   </ngx-datatable-column>
 
-  <ngx-datatable-column name="Description Arabic" prop="descriptionAr">
+  <ngx-datatable-column name="{{'Categories::CategoryDescAr' | abpLocalization}}" prop="descriptionAr">
     <ng-template let-row="row" ngx-datatable-cell-template>
       {{ row.descriptionAr }}
     </ng-template>
   </ngx-datatable-column>
 
-  <ngx-datatable-column name="Description English" prop="descriptionEn">
+  <ngx-datatable-column name="{{'Categories::CategoryDescEn' | abpLocalization}}" prop="descriptionEn">
     <ng-template let-row="row" ngx-datatable-cell-template>
       {{ row.descriptionEn }}
     </ng-template>
@@ -38,9 +38,9 @@
   <!-- Actions Column -->
   <ngx-datatable-column name="Actions" [sortable]="false" [headerClass]="'text-center'" [cellClass]="'text-center'">
     <ng-template let-row="row" ngx-datatable-cell-template>
-      <button class="btn btn-info btn-sm" (click)="viewCategoryDetails(row.id)">Details</button>
-      <button class="btn btn-warning btn-sm mx-2" (click)="editCategory(row.id)">Edit</button>
-      <button class="btn btn-danger btn-sm" (click)="deleteCategory(row.id)">Delete</button>
+      <button class="btn btn-info btn-sm" (click)="viewCategoryDetails(row.id)">{{'::Details' | abpLocalization}}</button>
+      <button class="btn btn-warning btn-sm mx-2" (click)="editCategory(row.id)">{{'::Edit' | abpLocalization}}</button>
+      <button class="btn btn-danger btn-sm" (click)="deleteCategory(row.id)">{{'::Delete' | abpLocalization}}</button>
     </ng-template>
   </ngx-datatable-column>
 

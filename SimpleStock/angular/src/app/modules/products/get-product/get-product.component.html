@@ -1,51 +1,51 @@
 <div class="container">
     <div class="card p-4">
-      <h2 class="card-title mb-4">Product Details</h2>
+      <h2 class="mb-4">{{'Products::ProductDetails' | abpLocalization}}</h2>
       
       <form [formGroup]="productForm">
         <div>
-            <label for="id" class="form-label">Product ID:</label>
+            <label for="id" class="form-label">{{'Products::ProductID' | abpLocalization}}</label>
             <input type="text" id="id" formControlName="id" class="form-control" readonly>
         </div>
 
         <div>
-          <label for="nameAr" class="form-label">Name (Arabic):</label>
+          <label for="nameAr" class="form-label">{{'Products::ProductNameAr' | abpLocalization}}</label>
           <input type="text" id="nameAr" formControlName="nameAr" class="form-control" readonly>
         </div>
   
   
         <div>
-          <label for="nameEn" class="form-label">Name (English):</label>
+          <label for="nameEn" class="form-label">{{'Products::ProductNameEn' | abpLocalization}}</label>
           <input type="text" id="nameEn" formControlName="nameEn" class="form-control" readonly>
         </div>
   
 
         <div>
-          <label for="descriptionAr" class="form-label">Description (Arabic):</label>
+          <label for="descriptionAr" class="form-label">{{'Products::ProductDescAr' | abpLocalization}}</label>
           <textarea id="descriptionAr" formControlName="descriptionAr" class="form-control"  readonly></textarea>
         </div>
   
 
         <div>
-          <label for="descriptionEn" class="form-label">Description (English):</label>
+          <label for="descriptionEn" class="form-label">{{'Products::ProductDescEn' | abpLocalization}}</label>
           <textarea id="descriptionEn" formControlName="descriptionEn" class="form-control"  readonly></textarea>
         </div>
   
    
         <div>
-          <label for="categoryId" class="form-label">Category ID:</label>
+          <label for="categoryId" class="form-label">{{'Categories::CategoryID' | abpLocalization}}:</label>
           <input type="text" id="categoryId" formControlName="categoryId" class="form-control" readonly>
         </div>
   
 
         <div>
-            <label for="creationTime" class="form-label">Created On:</label>
+            <label for="creationTime" class="form-label">{{'::Created' | abpLocalization}} : </label>
             <p id="creationTime" class="form-control-plaintext">
               {{ productForm.controls['creationTime'].value | date: 'medium' }}
             </p>
         </div>
         <div class="flex items-center justify-end gap-4 mt-6">
-          <button type="button" class="btn btn-secondary" (click)="cancel()">Back</button>
+          <button type="button" class="btn btn-secondary" (click)="cancel()">{{'::Back' | abpLocalization}}</button>
         </div>
       </form>
     </div>

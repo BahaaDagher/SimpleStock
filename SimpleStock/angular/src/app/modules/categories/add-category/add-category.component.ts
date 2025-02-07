@@ -5,8 +5,6 @@ import { CategoriesService } from '@proxy/categories';
 
 @Component({
   selector: 'app-add-category',
-  standalone: true,
-  imports: [ReactiveFormsModule],
   templateUrl: './add-category.component.html',
   styleUrls: ['./add-category.component.scss'],
 })

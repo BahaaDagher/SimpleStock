@@ -1,28 +1,29 @@
 <div class="card p-3">
+  <h2>{{'Categories::EditCategory' | abpLocalization}}  </h2>
     <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
       <div class="w-full">
-        <label for="nameAr" class="block text-sm font-medium">Name (Arabic):</label>
+        <label for="nameAr" class="block text-sm font-medium">{{'Categories::CategoryNameAr' | abpLocalization}} : </label>
         <input type="text" formControlName="nameAr" id="nameAr" class="form-control w-full">
       </div>
   
       <div class="w-full">
-        <label for="nameEn" class="block text-sm font-medium">Name (English):</label>
+        <label for="nameEn" class="block text-sm font-medium">{{'Categories::CategoryNameEn' | abpLocalization}} : </label>
         <input type="text" formControlName="nameEn" id="nameEn" class="form-control w-full">
       </div>
   
       <div class="w-full">
-        <label for="descriptionAr" class="block text-sm font-medium">Description (Arabic):</label>
+        <label for="descriptionAr" class="block text-sm font-medium">{{'Categories::CategoryDescAr' | abpLocalization}} : </label>
         <input type="text" formControlName="descriptionAr" id="descriptionAr" class="form-control w-full">
       </div>
   
       <div class="w-full">
-        <label for="descriptionEn" class="block text-sm font-medium">Description (English):</label>
+        <label for="descriptionEn" class="block text-sm font-medium">{{'Categories::CategoryDescEn' | abpLocalization}} : </label>
         <input type="text" formControlName="descriptionEn" id="descriptionEn" class="form-control w-full">
       </div>
   
       <div class="flex items-center justify-end gap-4 mt-6">
-        <button type="submit" [disabled]="!categoryForm.valid" class="btn btn-primary">Save</button>
-        <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+        <button type="submit" [disabled]="!categoryForm.valid" class="btn btn-primary m-1">{{'::Save' | abpLocalization}}  </button>
+        <button type="button" class="btn btn-secondary m-1" (click)="cancel()">{{'::Cancel' | abpLocalization}}  </button>
       </div>
     </form>
   </div>

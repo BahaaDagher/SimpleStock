@@ -1,0 +1,33 @@
+{
+  "culture": "ar",
+  "texts": {
+    "SimpleStock.Categories": "التصنيفات",
+    "SimpleStock.AllCategories": "كل التصنيفات",
+    "Permission:Categories:CreateEditCategory": "إنشاء وتعديل تصنيف",
+    "Permission:Categories:GetCategory": "عرض تصنيف",
+    "Permission:Categories:ListCategory": "عرض التصنيفات",
+    "Permission:Categories:DeleteCategory": "حذف التصنيف",
+    "Categories:InvalidCategoryNameAr": "اسم التصنيف باللغة العربية غير صالح",
+    "Categories:InvalidCategoryNameEn": "اسم التصنيف باللغة الانجليزية غير صالح",
+    "Categories:InvalidCategoryDescAr": "وصف التصنيف باللغة العربية غير صالح",
+    "Categories:InvalidCategoryDescEn": "وصف التصنيف باللغة الانجليزية غير صالح",
+    "Categories:InvalidCategoryCategory": "تصنيف التصنيف غير صالح",
+    "AddCategory": "إضافة تصنيف ",
+    "EditCategory": "تعديل تصنيف",
+    "CategoryNameAr": "اسم التصنيف باللغة العربية",
+    "CategoryNameEn": "اسم التصنيف باللغة الانجليزية",
+    "CategoryDescAr": "وصف التصنيف باللغة العربية",
+    "CategoryDescEn": "وصف التصنيف باللغة الانجليزية",
+    "CategoryCategory": "التصنيف",
+    "CategoryID": "رقم التصنيف",
+    "CategoryDetails": "تفاصيل التصنيف",
+
+    "SimpleStock.Categories:STORE_Categories_0001": "التصنيف غير موجود!",
+    "SimpleStock.Categories:STORE_Categories_0002": "اسم التصنيف باللغة العربية غير صالح!",
+    "SimpleStock.Categories:STORE_Categories_0003": "اسم التصنيف باللغة الانجليزية غير صالح!",
+    "SimpleStock.Categories:STORE_Categories_0004": "وصف التصنيف باللغة العربية غير صالح!",
+    "SimpleStock.Categories:STORE_Categories_0005": "وصف التصنيف باللغة الانجليزية غير صالح!",
+    "SimpleStock.Categories:STORE_Categories_0006": "تصنيف التصنيف غير صالح!",
+    "SimpleStock.Categories:STORE_Categories_0007": "التصنيف موجود بالفعل!"
+  }
+}

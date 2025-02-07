@@ -47,12 +47,21 @@ public class SimpleStockDomainSharedModule : AbpModule
                 .AddBaseTypes(typeof(AbpValidationResource))
                 .AddVirtualJson("/Localization/SimpleStock");
 
+            options.Resources
+               .Add<ProductsResource>("en")
+               .AddBaseTypes(typeof(AbpValidationResource))
+               .AddVirtualJson("/Localization/Products");
+            options.Resources
+               .Add<CategoriesResource>("ar")
+               .AddBaseTypes(typeof(AbpValidationResource))
+               .AddVirtualJson("/Localization/Categories");
+
             options.DefaultResourceType = typeof(SimpleStockResource);
         });
 
         Configure<AbpExceptionLocalizationOptions>(options =>
         {
-            options.MapCodeNamespace("SimpleStock", typeof(SimpleStockResource));
+            options.MapCodeNamespace("SimpleStock.Products", typeof(ProductsResource));
         });
     }
 }

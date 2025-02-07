@@ -1,28 +1,28 @@
 <div class="container mt-4">
-    <h2>Add New Category</h2>
+    <h2>{{'Categories::AddCategory' | abpLocalization}}</h2>
     <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
       <div class="mb-3">
-        <label class="form-label">Name (Arabic)</label>
+        <label class="form-label">{{'Categories::CategoryNameAr' | abpLocalization}}</label>
         <input type="text" class="form-control" formControlName="nameAr" />
       </div>
   
       <div class="mb-3">
-        <label class="form-label">Name (English)</label>
+        <label class="form-label">{{'Categories::CategoryNameEn' | abpLocalization}}</label>
         <input type="text" class="form-control" formControlName="nameEn" />
       </div>
   
       <div class="mb-3">
-        <label class="form-label">Description (Arabic)</label>
+        <label class="form-label">{{'Categories::CategoryNameAr' | abpLocalization}}</label>
         <textarea class="form-control" formControlName="descriptionAr"></textarea>
       </div>
   
       <div class="mb-3">
-        <label class="form-label">Description (English)</label>
+        <label class="form-label">{{'Categories::CategoryNameEn' | abpLocalization}}</label>
         <textarea class="form-control" formControlName="descriptionEn"></textarea>
       </div>
   
-      <button type="submit" class="btn btn-success" [disabled]="categoryForm.invalid">Save</button>
-      <button type="button" class="btn btn-secondary ms-2" (click)="back()">Cancel</button>
+      <button type="submit" class="btn btn-success" [disabled]="categoryForm.invalid">{{'::Save' | abpLocalization}}</button>
+      <button type="button" class="btn btn-secondary ms-2" (click)="back()">{{'::Cancel' | abpLocalization}}</button>
     </form>
   </div>
   

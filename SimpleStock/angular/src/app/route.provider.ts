@@ -17,15 +17,15 @@ function configureRoutes(routesService: RoutesService) {
       },
       {
         path: '/categories',
-        name: 'Categories',
+        name: 'Categories::SimpleStock.Categories',
         iconClass: 'fas fa-list',
         order: 2,
         layout: eLayoutType.application,
-        // requiredPolicy: "SimpleStock.Categories.List"
+        
       },
       {
         path: '/products',
-        name: 'Products',
+        name: 'Products::SimpleStock.Products',
         iconClass: 'fas fa-box',
         order: 3,
         layout: eLayoutType.application,

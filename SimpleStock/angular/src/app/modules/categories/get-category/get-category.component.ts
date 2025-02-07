@@ -7,8 +7,6 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-get-category',
-  standalone: true,
-  imports: [CommonModule ,ReactiveFormsModule],
   templateUrl: './get-category.component.html',
   styleUrls: ['./get-category.component.scss']
 })

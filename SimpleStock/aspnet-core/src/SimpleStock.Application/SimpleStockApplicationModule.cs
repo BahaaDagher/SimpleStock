@@ -1,4 +1,5 @@
-﻿using Volo.Abp.Account;
+﻿using System;
+using Volo.Abp.Account;
 using Volo.Abp.AutoMapper;
 using Volo.Abp.Caching;
 using Volo.Abp.Caching.StackExchangeRedis;
@@ -34,7 +35,8 @@ public class SimpleStockApplicationModule : AbpModule
         Configure<AbpDistributedCacheOptions>(options =>
         {
             options.KeyPrefix = "SimpleStosk_";
-            
+            options.GlobalCacheEntryOptions.AbsoluteExpiration = DateTimeOffset.Now.AddHours(1);
+
         });
     }
 }

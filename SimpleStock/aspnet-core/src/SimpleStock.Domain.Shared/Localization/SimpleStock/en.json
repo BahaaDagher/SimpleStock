@@ -3,11 +3,24 @@
   "texts": {
     "Menu:Home": "Home",
     "Welcome": "Welcome",
+    "WelcomeToOurStoke": "Welcome To Our Simple Stoke",
     "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io.",
-    "SimpleStock.Products": "Products",
-    "Permission:Products:CreateEditProduct": "Create or Edit Product",
-    "Permission:Products:DeleteProduct": "Delete Product",
-    "Permission:Products:GetProduct": "Get Product Details",
-    "Permission:Products:ListProduct": "List Products"
+    "Required": "this feild is required",
+    "MaxLength": "max length is {0} charcters",
+    "Cancel": "Cancel",
+    "Save": "Save",
+    "Actions": "Actions",
+    "Details": "Details",
+    "Edit": "Edit",
+    "Delete": "Delete",
+    "Search": "Search",
+    "SearchByName": "Search by name",
+    "ConfirmDelete": "Are you sure?",
+    "ConfirmDeleteMessage": "This action cannot be undone!",
+    "DeleteSuccess": "Product deleted successfully.",
+    "Created": "Created on",
+    "Back": "Back",
+    "Please_Login_as_Admin_to_can_See_Our_Products": "Please Login as Admin to can See Our Products"
+
   }
 }

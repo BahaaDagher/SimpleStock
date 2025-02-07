@@ -1,0 +1,36 @@
+{
+  "culture": "en",
+  "texts": {
+    "SimpleStock.Categories": "Categories",
+    "SimpleStock.AllCategories": "All Categories",
+    "Permission:Categories:CreateEditCategory": "Create / Edit Category",
+    "Permission:Categories:GetCategory": "Get Category",
+    "Permission:Categories:ListCategory": "List Category",
+    "Permission:Categories:DeleteCategory": "Delete Category",
+    "Categories:InvalidCategoryNameAr": "Category Name in Arabic is invalid",
+    "Categories:InvalidCategoryNameEn": "Category Name in English is invalid",
+    "Categories:InvalidCategoryDescAr": "Category Description in Arabic is invalid",
+    "Categories:InvalidCategoryDescEn": "Category Description in English is invalid",
+    "Categories:InvalidCategoryCategory": "Category Category is invalid",
+    "AddCategory": "Add Category",
+    "EditCategory": "Edit Category",
+    "CategoryNameAr": "Category Name Arabic",
+    "CategoryNameEn": "Category Name English",
+    "CategoryDescAr": "Category Description Arabic",
+    "CategoryDescEn": "Category Description English",
+    "CategoryCategory": "Category Category",
+    "CategoryID": "Category ID",
+    "CategoryDetails": "Category Details",
+
+
+
+
+    "SimpleStock.Categories:STORE_Categories_0001": "Category not found!",
+    "SimpleStock.Categories:STORE_Categories_0002": "Category name in Arabic is Invalid!",
+    "SimpleStock.Categories:STORE_Categories_0003": "Category name in English is Invalid",
+    "SimpleStock.Categories:STORE_Categories_0004": "Category Description in Arabic is Invalid",
+    "SimpleStock.Categories:STORE_Categories_0005": "Category Description in English is Invalid",
+    "SimpleStock.Categories:STORE_Categories_0006": "Category Category is Invalid",
+    "SimpleStock.Categories:STORE_Categories_0007": "Category already exists!"
+  }
+}

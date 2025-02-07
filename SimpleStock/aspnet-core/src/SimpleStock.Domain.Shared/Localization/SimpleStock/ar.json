@@ -3,11 +3,32 @@
   "texts": {
     "Menu:Home": "الصفحة الرئيسية",
     "Welcome": "مرحباً",
+    "WelcomeToOurStoke": "مرحبا بك في مخزننا البسيط",
     "LongWelcomeMessage": "مرحبا بكم في التطبيق. هذا مشروع بدء تشغيل يعتمد على إطار عمل ABP. لمزيد من المعلومات ، يرجى زيارة abp.io.",
-    "SimpleStock.Products": "المنتجات",
-    "Permission:Products:CreateEditProduct": "إنشاء أو تعديل المنتج",
-    "Permission:Products:DeleteProduct": "حذف المنتج",
-    "Permission:Products:GetProduct": "عرض تفاصيل المنتج",
-    "Permission:Products:ListProduct": "عرض قائمة المنتجات"
+    "Required": "من فضلك املأ هذا الحقل",
+    "MaxLength": "الحد الأقصى {0} حرف",
+    "Cancel": "إلغاء",
+    "Save": "حفظ",
+    "Actions": "الخيارات",
+    "Details": "تفاصيل",
+    "Edit": "تعديل",
+    "Delete": "مسح",
+    "Search": "بحث",
+    "SearchByName": "بحث بالإسم",
+    "ConfirmDelete": "هل أنت متأكد؟",
+    "ConfirmDeleteMessage": "لا يمكن التراجع عن هذا الإجراء!",
+    "DeleteSuccess": "تم حذف المنتج بنجاح.",
+    "Created": "تم الإنشاء في ",
+    "Back": "رجوع",
+    "Please_Login_as_Admin_to_can_See_Our_Products": "يُرجى تسجيل الدخول كمسؤول لتمكن من رؤية منتجاتنا"
+
+
+
+
+
+
+
+
+
   }
 }

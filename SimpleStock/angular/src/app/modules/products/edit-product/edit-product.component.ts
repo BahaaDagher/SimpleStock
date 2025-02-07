@@ -8,8 +8,6 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-edit-product',
-  standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],  
   templateUrl: './edit-product.component.html',
   styleUrls: ['./edit-product.component.scss']
 })

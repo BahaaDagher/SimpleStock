@@ -1,9 +1,9 @@
 <div class="container">
   <div class="p-5 text-center">
 
-    <h1>{{ '::Welcome' | abpLocalization }}</h1>
+    <h1>{{ '::WelcomeToOurStoke' | abpLocalization }}</h1>
 
-    <p class="lead px-lg-5 mx-lg-5 LoginInstructions">Please Login as Admin to can See Our <span class="products">Products</span></p>
+    <p *ngIf="!hasLoggedIn" class="lead px-lg-5 mx-lg-5 LoginInstructions">{{ '::Please_Login_as_Admin_to_can_See_Our_Products' | abpLocalization }} </p>
 
     <a *ngIf="!hasLoggedIn" (click)="login()" class="px-4 btn btn-primary ms-1" role="button"
     ><i class="fa fa-sign-in" aria-hidden="true"></i> {{ 'AbpAccount::Login' | abpLocalization }}</a

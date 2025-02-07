@@ -7,8 +7,6 @@ import { ProductDto } from '@proxy/products';
 
 @Component({
   selector: 'app-get-product',
-  standalone: true,
-  imports: [ ReactiveFormsModule, CommonModule],
   templateUrl: './get-product.component.html',
   styleUrl: './get-product.component.scss'
 })

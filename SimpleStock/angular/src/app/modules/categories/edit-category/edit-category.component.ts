@@ -7,8 +7,6 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-edit-category',
-  standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],  
   templateUrl: './edit-category.component.html',
   styleUrls: ['./edit-category.component.scss']
 })

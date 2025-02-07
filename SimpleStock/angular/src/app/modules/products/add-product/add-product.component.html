@@ -1,35 +1,35 @@
 <div class="container mt-4">
-    <h2>Add New Product</h2>
+    <h2>{{'Products::AddProduct' | abpLocalization}} : </h2>
     <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
       <div class="mb-3">
-        <label class="form-label" for="nameAr">Product Name (Arabic)</label>
+        <label class="form-label" for="nameAr">{{'Products::ProductNameAr' | abpLocalization}}</label>
         <input type="text" class="form-control" id="nameAr" formControlName="nameAr" />
       </div>
   
       <div class="mb-3">
-        <label class="form-label" for="nameEn">Product Name (English)</label>
+        <label class="form-label" for="nameEn">{{'Products::ProductNameEn' | abpLocalization}}</label>
         <input type="text" class="form-control" id="nameEn" formControlName="nameEn" />
       </div>
   
       <div class="mb-3">
-        <label class="form-label" for="descriptionAr">Product Description (Arabic)</label>
+        <label class="form-label" for="descriptionAr">{{'Products::ProductDescAr' | abpLocalization}}</label>
         <textarea class="form-control" id="descriptionAr" formControlName="descriptionAr"></textarea>
       </div>
   
       <div class="mb-3">
-        <label class="form-label" for="descriptionEn">Product Description (English)</label>
+        <label class="form-label" for="descriptionEn">{{'Products::ProductDescEn' | abpLocalization}}</label>
         <textarea class="form-control" id="descriptionEn" formControlName="descriptionEn"></textarea>
       </div>
   
       <div class="mb-3">
-        <label class="form-label" for="categoryId">Category</label>
+        <label class="form-label" for="categoryId">{{'Products::ProductCategory' | abpLocalization}}</label>
         <select class="form-control" formControlName="categoryId">
           <option *ngFor="let category of categories" [value]="category.id">{{ category.nameEn }}</option>
         </select>
       </div>
   
-      <button type="submit" class="btn btn-success" [disabled]="productForm.invalid">Save</button>
-      <button type="button" class="btn btn-secondary ms-2" (click)="back()">Cancel</button>
+      <button type="submit" class="btn btn-success" [disabled]="productForm.invalid">{{'::Save' | abpLocalization}}</button>
+      <button type="button" class="btn btn-secondary ms-2" (click)="back()">{{'::Cancel' | abpLocalization}}</button>
     </form>
   </div>
   

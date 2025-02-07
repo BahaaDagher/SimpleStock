@@ -81,7 +81,7 @@ namespace SimpleStock.Products
                 ObjectMapper.Map<List<Product>, List<ProductDto>>(products)
             );
         }
-        [Authorize(SimpleStockPermissions.GetProductPermission)]
+        //[Authorize(SimpleStockPermissions.GetProductPermission)]
         public async Task<ProductDto> GetProductAsync(int id)
         {
             var product = await productRepository

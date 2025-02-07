@@ -2,54 +2,38 @@
   <form class="card-body" [formGroup]="searchForm">
     <div class="col-md-6">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search by Name" id="filter" formControlName="filter">
+        <input type="text" class="form-control" placeholder="{{'::SearchByName' | abpLocalization}}" id="filter" formControlName="filter">
         <!-- Select with placeholder -->
-        <select class="form-control" formControlName="categoryId">
-          <option value="-1" selected >All categories</option>
-          <option *ngFor="let category of categories" [value]="category.id">
-            {{ category.nameEn }}
-          </option>
-        </select>
+        @if(currentLang=='en'){
+          <select class="form-control" formControlName="categoryId">
+            <option value="-1" selected >{{'Categories::SimpleStock.AllCategories' | abpLocalization}}</option>
+            <option *ngFor="let category of categories" [value]="category.id">
+              {{ category.nameEn }}
+            </option>
+          </select>
+        }
+        @else{
+          <select class="form-control" formControlName="categoryId">
+            <option value="-1" selected >{{'Categories::SimpleStock.AllCategories' | abpLocalization}}</option>
+            <option *ngFor="let category of categories" [value]="category.id">
+              {{ category.nameAr }}
+            </option>
+          </select>
+        }
         
         <div class="input-group-append">
-          <button class="btn btn-info" type="button" id="searchButton" (click)="searchProducts()">Search</button>
+          <button class="btn btn-info" type="button" id="searchButton" (click)="searchProducts()">{{'::Search' | abpLocalization}}</button>
         </div>
       </div>
     </div>
   </form>
 </div>
 
-<!-- <div class="card">
-  <form class="card-body" [formGroup]="searchForm">
-    <div class="flex gap-4">
-      <div class="w-1/2">
-        <label for="filter" class="block text-sm">Name:</label>
-        <input type="text" class="form-control w-full" id="filter" formControlName="filter">
-      </div>
-
-      <div class="w-1/2">
-        <label for="categoryId" class="block text-sm">Category:</label>
-        <select class="form-control w-full" formControlName="categoryId">
-          <option [value]="-1">All</option>
-          <option *ngFor="let category of categories" [value]="category.id">
-            {{ category.nameEn }}
-          </option>
-        </select>
-      </div>
-      
-      <div class="w-auto self-end">
-        <button type="button" class="btn btn-secondary" (click)="searchProducts()">Search</button>
-      </div>
-    </div>
-  </form>
-</div> -->
-
-
 <div class="d-flex flex-row-reverse">
-  <button *ngIf="canCreate" class="btn btn-primary mb-2" (click)="addProduct()">+ New Product</button>
+  <button *ngIf="canCreate" class="btn btn-primary mb-2" (click)="addProduct()"> {{'Products::AddProduct' | abpLocalization}}</button>
 </div>
 
-<h2>Products List</h2>
+<h2>{{'Products::SimpleStock.Products' | abpLocalization}}</h2>
 <ngx-datatable class="material"
   [rows]="(products$ | async)?.items || []"
   [count]="(products$ | async)?.totalCount || 0"
@@ -57,31 +41,33 @@
   [headerHeight]="50"
   [footerHeight]="50"
   [rowHeight]="50"
-  [limit]="5">
+  [limit]="5"
+
+>
   
-  <ngx-datatable-column name="Name Arabic" prop="nameAr">
+  <ngx-datatable-column name="{{'Products::AddProduct:ProductNameAr' | abpLocalization}}" prop="nameAr">
     <ng-template let-row="row" ngx-datatable-cell-template>
       {{ row.nameAr }}
     </ng-template>
   </ngx-datatable-column>
 
-  <ngx-datatable-column name="Name English" prop="nameEn">
+  <ngx-datatable-column name="{{'Products::AddProduct:ProductNameEn' | abpLocalization}}" prop="nameEn">
     <ng-template let-row="row" ngx-datatable-cell-template>
       {{ row.nameEn }}
     </ng-template>
   </ngx-datatable-column>
 
-  <ngx-datatable-column name="Category English" prop="categoryNameEn">
+  <ngx-datatable-column name="{{'Categories::AddCategory:CategoryNameEn' | abpLocalization}}" prop="categoryNameEn">
     <ng-template let-row="row" ngx-datatable-cell-template>
       {{ row.categoryNameEn }}
     </ng-template>
   </ngx-datatable-column>
 
-  <ngx-datatable-column *ngIf="canShowDetails || canDelete || canEdit" name="Actions" [sortable]="false"   [headerClass]="'text-center'"  [cellClass]="'text-center'"  >
+  <ngx-datatable-column *ngIf="canShowDetails || canDelete || canEdit" name="{{'::Actions' | abpLocalization}}" [sortable]="false"   [headerClass]="'text-center'"  [cellClass]="'text-center'"  >
     <ng-template let-row="row" ngx-datatable-cell-template>
-      <button *ngIf="canShowDetails" class="btn btn-info btn-sm" (click)="viewProductDetails(row.id)">Details</button>
-      <button *ngIf="canEdit" class="btn btn-warning btn-sm mx-2" (click)="editProduct(row.id)">Edit</button>
-      <button *ngIf="canDelete" class="btn btn-danger btn-sm" (click)="deleteProduct(row.id)">Delete</button>
+      <button *ngIf="canShowDetails" class="btn btn-info btn-sm" (click)="viewProductDetails(row.id)">{{'::Details' | abpLocalization}}</button>
+      <button *ngIf="canEdit" class="btn btn-warning btn-sm mx-2" (click)="editProduct(row.id)">{{'::Edit' | abpLocalization}}</button>
+      <button *ngIf="canDelete" class="btn btn-danger btn-sm" (click)="deleteProduct(row.id)">{{'::Delete' | abpLocalization}}</button>
     </ng-template>
   </ngx-datatable-column>
 

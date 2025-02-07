@@ -3,14 +3,11 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { CategoriesService, CategoryDto } from '@proxy/categories';
 import { ListService, PagedResultDto } from '@abp/ng.core';
-import { CommonModule } from '@angular/common';
-import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+
 import { SweetAlertService } from 'src/app/services/sweet-alert.service';
 
 @Component({
   selector: 'app-list-categories',
-  standalone: true,
-  imports: [NgxDatatableModule, CommonModule],
   templateUrl: './list-categories.component.html',
   styleUrls: ['./list-categories.component.scss'],
   providers: [ListService],

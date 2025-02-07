@@ -8,8 +8,6 @@ import { ProductsService } from '@proxy/products';
 
 @Component({
   selector: 'app-add-product',
-  standalone: true,
-  imports: [ ReactiveFormsModule , CommonModule],
   templateUrl: './add-product.component.html',
   styleUrl: './add-product.component.scss'
 })

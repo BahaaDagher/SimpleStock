@@ -22,6 +22,6 @@ public class SimpleStockPermissionDefinitionProvider : PermissionDefinitionProvi
 
     private static LocalizableString L(string name)
     {
-        return LocalizableString.Create<SimpleStockResource>(name);
+        return LocalizableString.Create<ProductsResource>(name);
     }
 }
