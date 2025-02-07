@@ -16,6 +16,9 @@ The **Simple Store** project is a modern web application built using the **ABP F
 - **Database**: SQL Server
 - **Authentication & Authorization**: Integrated with ABP’s Identity Management System
 
+## Admin
+- **user name : admin@abp.io
+- **password : 1q2w3E*
 
 
 
