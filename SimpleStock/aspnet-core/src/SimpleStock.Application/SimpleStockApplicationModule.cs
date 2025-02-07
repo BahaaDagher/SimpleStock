@@ -1,7 +1,10 @@
 ﻿using Volo.Abp.Account;
 using Volo.Abp.AutoMapper;
+using Volo.Abp.Caching;
+using Volo.Abp.Caching.StackExchangeRedis;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
+using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.SettingManagement;
@@ -17,7 +20,8 @@ namespace SimpleStock;
     typeof(AbpPermissionManagementApplicationModule),
     typeof(AbpTenantManagementApplicationModule),
     typeof(AbpFeatureManagementApplicationModule),
-    typeof(AbpSettingManagementApplicationModule)
+    typeof(AbpSettingManagementApplicationModule),
+    typeof(AbpCachingStackExchangeRedisModule)
     )]
 public class SimpleStockApplicationModule : AbpModule
 {
@@ -26,6 +30,11 @@ public class SimpleStockApplicationModule : AbpModule
         Configure<AbpAutoMapperOptions>(options =>
         {
             options.AddMaps<SimpleStockApplicationModule>();
+        });
+        Configure<AbpDistributedCacheOptions>(options =>
+        {
+            options.KeyPrefix = "SimpleStosk_";
+            
         });
     }
 }
