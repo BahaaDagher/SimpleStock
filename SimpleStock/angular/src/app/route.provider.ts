@@ -21,6 +21,7 @@ function configureRoutes(routesService: RoutesService) {
         iconClass: 'fas fa-list',
         order: 2,
         layout: eLayoutType.application,
+        // requiredPolicy: "SimpleStock.Categories.List"
       },
       {
         path: '/products',
@@ -28,6 +29,7 @@ function configureRoutes(routesService: RoutesService) {
         iconClass: 'fas fa-box',
         order: 3,
         layout: eLayoutType.application,
+        requiredPolicy: "SimpleStock.Products.List"
       },
     ]);
   };

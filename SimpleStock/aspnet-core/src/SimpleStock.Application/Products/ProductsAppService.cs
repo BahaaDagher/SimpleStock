@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+using SimpleStock.Permissions;
 
 
 namespace SimpleStock.Products
@@ -26,15 +28,14 @@ namespace SimpleStock.Products
         #endregion
 
         #region ProductAppService
-        //[Authorize(Demo1Permissions.CreateEditProductPermission)] 
+        [Authorize(SimpleStockPermissions.CreateEditProductPermission)]
         public async Task<ProductDto> CreateProductAsync(CreateUpdateProductDto input)
         {
-            
             var product = ObjectMapper.Map<CreateUpdateProductDto, Product>(input); 
             var inserted = await productRepository.InsertAsync(product , autoSave: true);
             return ObjectMapper.Map<Product, ProductDto>(inserted); 
         }
-        //[Authorize(Demo1Permissions.DeleteProductPermission)]
+        [Authorize(SimpleStockPermissions.DeleteProductPermission)]
         public async Task<bool> DeleteProductAsync(int id)
         {
             var product = await productRepository.GetAsync(id);
@@ -45,7 +46,7 @@ namespace SimpleStock.Products
             }
             return false; 
         }
-        //[Authorize(Demo1Permissions.ListProductPermission)]
+        [Authorize(SimpleStockPermissions.ListProductPermission)]
         public async Task<PagedResultDto<ProductDto>> GetListAsync(GetProductListDto input)
         {
             if (input.Sorting.IsNullOrWhiteSpace())
@@ -80,7 +81,7 @@ namespace SimpleStock.Products
                 ObjectMapper.Map<List<Product>, List<ProductDto>>(products)
             );
         }
-        //[Authorize(Demo1Permissions.GetProductPermission)]
+        [Authorize(SimpleStockPermissions.GetProductPermission)]
         public async Task<ProductDto> GetProductAsync(int id)
         {
             var product = await productRepository
@@ -94,7 +95,7 @@ namespace SimpleStock.Products
             return  ObjectMapper.Map<Product, ProductDto>(product);
             
         }
-        //[Authorize(Demo1Permissions.CreateEditProductPermission)]
+        [Authorize(SimpleStockPermissions.CreateEditProductPermission)]
         public async Task<ProductDto> UpdateProductAsync(CreateUpdateProductDto input  )
         {
             var exisiting  = await productRepository.GetAsync(input.Id); // product 

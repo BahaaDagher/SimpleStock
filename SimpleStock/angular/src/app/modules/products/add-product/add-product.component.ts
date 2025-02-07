@@ -1,4 +1,5 @@
 import { PagedAndSortedResultRequestDto } from '@abp/ng.core';
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -8,7 +9,7 @@ import { ProductsService } from '@proxy/products';
 @Component({
   selector: 'app-add-product',
   standalone: true,
-  imports: [ ReactiveFormsModule],
+  imports: [ ReactiveFormsModule , CommonModule],
   templateUrl: './add-product.component.html',
   styleUrl: './add-product.component.scss'
 })

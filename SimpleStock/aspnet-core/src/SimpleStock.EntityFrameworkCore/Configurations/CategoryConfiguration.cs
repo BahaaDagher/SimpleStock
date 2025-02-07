@@ -13,7 +13,6 @@ namespace SimpleStock.Configurations
         {
             // to make a configuration to all the data which added by FullAuditedEntity
             builder.ConfigureByConvention();
-            builder.Property(x=>x.Id).ValueGeneratedNever();
 
             builder.Property(x => x.NameAr).HasMaxLength(SimpleStockConsts.GeneralTextMaxLength);
             builder.Property(x => x.NameEn).HasMaxLength(SimpleStockConsts.GeneralTextMaxLength);

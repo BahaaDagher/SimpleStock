@@ -7,7 +7,7 @@ namespace SimpleStock.Categories
         public Category()
         {
         }
-        public Category(int id, string nameAR, string nameEn, string descriptionAr, string descriptionEn) : base(id)
+        public Category(string nameAR, string nameEn, string descriptionAr, string descriptionEn)
         {
             NameAr = nameAR;
             NameEn = nameEn;

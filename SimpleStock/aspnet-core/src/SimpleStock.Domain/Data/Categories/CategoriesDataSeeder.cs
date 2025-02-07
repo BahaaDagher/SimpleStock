@@ -22,7 +22,6 @@ namespace SimpleStock.Data.Categories
                 {
                     new Category
                     (
-                      id: 1,
                       nameAR: "أطعمة ومشروبات",
                       nameEn: "Food & Drinks",
                       descriptionAr: "يشمل جميع أنواع الأطعمة والمشروبات مثل الفواكه، الخضروات، والعصائر.",
@@ -30,7 +29,6 @@ namespace SimpleStock.Data.Categories
                     ),
                     new Category
                     (
-                      id: 2,
                       nameAR: "مواد تنظيف",
                       nameEn: "Cleaning Supplies",
                       descriptionAr: "مواد التنظيف مثل الصابون، المنظفات، والمطهرات.",
@@ -38,7 +36,6 @@ namespace SimpleStock.Data.Categories
                     ),
                     new Category
                     (
-                      id: 3,
                       nameAR: "عطور",
                       nameEn: "Perfumes",
                       descriptionAr: "تشمل جميع أنواع العطور مثل الروائح الشرقية والعصرية.",
@@ -46,7 +43,6 @@ namespace SimpleStock.Data.Categories
                     ),
                     new Category
                     (
-                      id: 4,
                       nameAR: "بلاستيك",
                       nameEn: "Plastics",
                       descriptionAr: "منتجات البلاستيك مثل الأكياس، الزجاجات، والأوعية البلاستيكية.",

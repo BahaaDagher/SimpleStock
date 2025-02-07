@@ -19,6 +19,9 @@ import { SweetAlertService } from 'src/app/services/sweet-alert.service';
 })
 export class ListProductsComponent implements OnInit {
   canCreate: boolean;
+  canEdit: boolean;
+  canDelete: boolean;
+  canShowDetails: boolean;
   products$: Observable<PagedResultDto<ProductDto>>;
   searchForm: FormGroup;
   categories: CategoryDto[] = [];
@@ -37,11 +40,14 @@ export class ListProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.searchProducts();
-    this.categoriesService.getList({ maxResultCount: 100 }).subscribe((response) => {
+    this.categoriesService.getList({ maxResultCount: 100  }).subscribe((response) => {
       this.categories = response.items;
     });
 
-    this.canCreate = this.permissionService.getGrantedPolicy('Demo1.Products.CreateEdit');
+    this.canCreate = this.permissionService.getGrantedPolicy('SimpleStock.Products.CreateEdit');
+    this.canEdit = this.permissionService.getGrantedPolicy('SimpleStock.Products.CreateEdit');
+    this.canDelete = this.permissionService.getGrantedPolicy('SimpleStock.Products.Delete');
+    this.canShowDetails = this.permissionService.getGrantedPolicy('SimpleStock.Products.Get');
   }
 
   addProduct(): void {
@@ -51,7 +57,7 @@ export class ListProductsComponent implements OnInit {
   buildForm() {
     this.searchForm = this.formBuilder.group({
       filter: new FormControl(''),
-      categoryId: new FormControl(null),
+      categoryId: new FormControl(-1),
       maxResultCount: new FormControl(100),
     });
   }
@@ -67,7 +73,7 @@ export class ListProductsComponent implements OnInit {
   }
 
   viewProductDetails(id: number) {
-    this.router.navigateByUrl(`/products/details/${id}`);
+    this.router.navigateByUrl(`/products/${id}`);
   }
 
   deleteProduct(id: number) {

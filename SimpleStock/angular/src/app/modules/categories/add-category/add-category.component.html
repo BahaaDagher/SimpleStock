@@ -1,0 +1,28 @@
+<div class="container mt-4">
+    <h2>Add New Category</h2>
+    <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label class="form-label">Name (Arabic)</label>
+        <input type="text" class="form-control" formControlName="nameAr" />
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Name (English)</label>
+        <input type="text" class="form-control" formControlName="nameEn" />
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Description (Arabic)</label>
+        <textarea class="form-control" formControlName="descriptionAr"></textarea>
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Description (English)</label>
+        <textarea class="form-control" formControlName="descriptionEn"></textarea>
+      </div>
+  
+      <button type="submit" class="btn btn-success" [disabled]="categoryForm.invalid">Save</button>
+      <button type="button" class="btn btn-secondary ms-2" (click)="back()">Cancel</button>
+    </form>
+  </div>
+  

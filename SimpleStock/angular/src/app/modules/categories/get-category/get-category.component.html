@@ -1,0 +1,35 @@
+<div class="card p-3">
+    <form [formGroup]="categoryForm">
+      <div class="w-full">
+        <label for="nameAr" class="block text-sm font-medium">Name (Arabic):</label>
+        <input type="text" formControlName="nameAr" id="nameAr" class="form-control w-full" [readonly]="true">
+      </div>
+  
+      <div class="w-full">
+        <label for="nameEn" class="block text-sm font-medium">Name (English):</label>
+        <input type="text" formControlName="nameEn" id="nameEn" class="form-control w-full" [readonly]="true">
+      </div>
+  
+      <div class="w-full">
+        <label for="descriptionAr" class="block text-sm font-medium">Description (Arabic):</label>
+        <input type="text" formControlName="descriptionAr" id="descriptionAr" class="form-control w-full" [readonly]="true">
+      </div>
+  
+      <div class="w-full">
+        <label for="descriptionEn" class="block text-sm font-medium">Description (English):</label>
+        <input type="text" formControlName="descriptionEn" id="descriptionEn" class="form-control w-full" [readonly]="true">
+      </div>
+      
+      <div class="mt-2">
+        <label for="creationTime" class="form-label">Created On:</label>
+        <p id="creationTime" class="form-control-plaintext">
+          {{ categoryForm.controls['creationTime'].value | date: 'medium' }}
+        </p>
+    </div>
+  
+      <div class="flex items-center justify-end gap-4 mt-6">
+        <button type="button" class="btn btn-secondary" (click)="cancel()">Back</button>
+      </div>
+    </form>
+  </div>
+  

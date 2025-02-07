@@ -2,8 +2,18 @@
 
 public static class SimpleStockPermissions
 {
-    public const string GroupName = "SimpleStock";
+    public const string MainGroupName = "SimpleStock";
 
-    //Add your own permission names. Example:
-    //public const string MyPermission1 = GroupName + ".MyPermission1";
+    // product group permission
+    public const string ProductGroupName = MainGroupName  + ".Products";
+
+    // product permission
+    public const string CreateEditProductPermission = ProductGroupName + ".CreateEdit"; 
+    public const string DeleteProductPermission = ProductGroupName + ".Delete"; 
+    public const string GetProductPermission = ProductGroupName + ".Get"; 
+    public const string ListProductPermission = ProductGroupName + ".List";
+
+
+
+
 }

@@ -1,31 +1,47 @@
-<div class="container">
-    <h2>Categories List</h2>
-    @if (categories.length > 0) {
-      <table class="table" id="tblGrid">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Name Arabic</th>
-            <th>Name English</th>
-            <th>Description Arabic</th>
-            <th>Description English</th>
-          </tr>
-        </thead>
-        <tbody>
-          @for (category of categories; track $index) {
-            <tr>
-              <td>{{ $index + 1 }}</td>
-              <td>{{ category.nameAr }}</td>
-              <td>{{ category.nameEn }}</td>
-              <td>{{ category.descriptionAr }}</td>
-              <td>{{ category.descriptionEn }}</td>
-            </tr>
-          }
-        </tbody>
-      </table>
-    } @else {
-      <div class="alert alert-info" role="alert">
-        No categories found
-      </div>
-    }
-  </div>
+<div class="d-flex flex-row-reverse">
+  <button  class="btn btn-primary mb-2" (click)="addProduct()">+  New Category</button>
+</div>
+<h2>Categories List</h2>
+<ngx-datatable class="material"
+  [rows]="(categories$ | async)?.items || []"
+  [count]="(categories$ | async)?.totalCount || 0"
+  [columnMode]="'force'"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  [rowHeight]="50"
+  [limit]="5">
+  
+  <ngx-datatable-column name="Name Arabic" prop="nameAr">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{ row.nameAr }}
+    </ng-template>
+  </ngx-datatable-column>
+
+  <ngx-datatable-column name="Name English" prop="nameEn">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{ row.nameEn }}
+    </ng-template>
+  </ngx-datatable-column>
+
+  <ngx-datatable-column name="Description Arabic" prop="descriptionAr">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{ row.descriptionAr }}
+    </ng-template>
+  </ngx-datatable-column>
+
+  <ngx-datatable-column name="Description English" prop="descriptionEn">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{ row.descriptionEn }}
+    </ng-template>
+  </ngx-datatable-column>
+
+  <!-- Actions Column -->
+  <ngx-datatable-column name="Actions" [sortable]="false" [headerClass]="'text-center'" [cellClass]="'text-center'">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      <button class="btn btn-info btn-sm" (click)="viewCategoryDetails(row.id)">Details</button>
+      <button class="btn btn-warning btn-sm mx-2" (click)="editCategory(row.id)">Edit</button>
+      <button class="btn btn-danger btn-sm" (click)="deleteCategory(row.id)">Delete</button>
+    </ng-template>
+  </ngx-datatable-column>
+
+</ngx-datatable>

@@ -3,6 +3,11 @@
   "texts": {
     "Menu:Home": "الصفحة الرئيسية",
     "Welcome": "مرحباً",
-    "LongWelcomeMessage": "مرحبا بكم في التطبيق. هذا مشروع بدء تشغيل يعتمد على إطار عمل ABP. لمزيد من المعلومات ، يرجى زيارة abp.io."
+    "LongWelcomeMessage": "مرحبا بكم في التطبيق. هذا مشروع بدء تشغيل يعتمد على إطار عمل ABP. لمزيد من المعلومات ، يرجى زيارة abp.io.",
+    "SimpleStock.Products": "المنتجات",
+    "Permission:Products:CreateEditProduct": "إنشاء أو تعديل المنتج",
+    "Permission:Products:DeleteProduct": "حذف المنتج",
+    "Permission:Products:GetProduct": "عرض تفاصيل المنتج",
+    "Permission:Products:ListProduct": "عرض قائمة المنتجات"
   }
 }
